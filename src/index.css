@@ -1,0 +1,278 @@
+/* Example styles, adjust as needed */
+
+body {
+  background-color: #fdfdfd;
+}
+ul.list-unstyled {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  list-style-type: none;
+  padding-left: 0;
+  cursor: pointer;
+}
+
+ul.list-unstyled li {
+  padding: 5px 6px;
+  /* cursor: pointer; */
+  transition: background-color 0.3s ease;
+}
+
+ul.list-unstyled li.active {
+  background-color: #f0f0f0; /* Example background color for active item */
+}
+
+ul.list-unstyled li:hover {
+  background-color: #f5f5f5; /* Example background color on hover */
+}
+
+.transition-navbar {
+  transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -100vw; /* Hidden by default */
+  width: 80.33vw; /* One-third of the viewport width */
+  height: 100%;
+  background-color: #fff;
+  box-shadow: 0 8px 24px hsla(210, 8%, 62%, 0.2) !important;
+  transition: left 0.3s ease-in-out;
+  z-index: 1000; /* Ensure it is above other content */
+}
+
+.sidebar.open {
+  left: 0; /* Visible when open */
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar li {
+  padding: 15px 20px;
+  /* border-bottom: 1px solid #ddd; */
+}
+
+.sidebar li:hover {
+  background-color: #f0f0f0;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.66); /* 66% opacity black overlay */
+  z-index: 1000; /* Ensure it is below the sidebar */
+}
+/* Default styles */
+.countdown ul {
+  padding: 12px 50px;
+  width: fit-content;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 5px 10px 15px 2px #e3dfdf;
+}
+
+.countdown li {
+  display: inline-block;
+  font-size: 16px;
+  list-style-type: none;
+  padding: 0 10px 10px;
+  color: #14419a;
+  font-weight: bold;
+  text-align: center;
+}
+
+.countdown li span {
+  display: block;
+  font-size: 35px;
+  font-weight: bold;
+  color: #14419a;
+}
+
+/* Media query for smaller screens */
+
+@media (max-width: 768px) {
+  .countdown li span {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 480px) {
+  .countdown ul {
+    padding: 0px 20px;
+    border-radius: 15px;
+  }
+
+  .countdown li {
+    font-size: 12px;
+    padding: 10px 3px 12px;
+  }
+
+  .countdown li span {
+    font-size: 20px;
+  }
+}
+
+.register_now_section .col-2 .register_now_card {
+  aspect-ratio: 1;
+}
+
+.register_now_section .register_now_card {
+  box-shadow: 5px 10px 15px 2px #eee;
+  height: 100%;
+  border-radius: 15px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s;
+}
+
+/* .register_now_section .register_now_card:hover {
+  background-color: #14419a;
+  color: white;
+} */
+
+.register_now_section .register_now_card::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 30px;
+  height: 30px;
+  background-color: #14419a;
+}
+
+.register_now_form_section {
+  background-color: #eee;
+}
+
+.register_now_form_section h4 {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+/* form */
+
+.register_now_form {
+  max-width: 500px;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 5px 10px 15px 2px #e3dfdf;
+  padding: 30px 50px 30px 30px;
+}
+
+.register_now_btn {
+  background-color: #14419a;
+}
+
+.register_now_form .form-input {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  margin-top: 40px;
+}
+
+.register_now_form .form-input:nth-child(2) {
+  margin-top: 20px;
+}
+
+.register_now_form .form-input label {
+  position: absolute;
+  left: 0;
+  bottom: 5px;
+  color: #777;
+  font-size: 16px;
+  font-weight: normal;
+  transition: all 0.2s ease-out;
+  padding: 0 5px;
+  transform-origin: left bottom;
+  pointer-events: none;
+}
+
+.register_now_form .form-input label.float {
+  bottom: 100%;
+  transform: scale(0.8);
+}
+
+.register_now_form .form-input input[type="text"],
+.register_now_form .form-input input[type="email"],
+.register_now_form .form-input input[type="number"] {
+  display: inline-block;
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid #aaa;
+  padding: 5px;
+  padding-top: 0;
+  background-color: transparent;
+  font-size: 16px;
+}
+
+.register_now_form .form-input input[type="text"]:focus,
+.register_now_form .form-input input[type="email"]:focus,
+.register_now_form .form-input input[type="number"] {
+  outline: 0;
+}
+
+.register_now_form .form-input select {
+  display: inline-block;
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid #aaa;
+  padding: 5px;
+  padding-top: 0;
+  background-color: transparent;
+  font-size: 16px;
+}
+
+.register_now_form .form-input.select-label label {
+  opacity: 0;
+}
+
+.register_now_form .form-input.select-label label.float {
+  opacity: 1;
+}
+
+.register_now_form .form-input.select-label select:focus {
+  outline: 0;
+}
+
+.register_now_btn {
+  padding: 15px 40px;
+  font-weight: 500;
+}
+
+.message-box {
+  background-image: url("/src/assets/head-foot.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  /* height: 100vh; */
+  padding: 40px 0 !important;
+  /* width: 100%; */
+}
+
+.footer-card {
+  background-color: #e8f1fa;
+  border-radius: 4px 34px 4px 34px !important;
+}
+
+.social_media {
+  display: flex !important;
+  width: 35px !important;
+  height: 35px !important;
+  background: #fff !important;
+  border-radius: 100% !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: #174190 !important;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.24) !important;
+  margin-right: 10px;
+}

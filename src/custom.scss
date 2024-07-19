@@ -1,0 +1,17 @@
+// overwrite theme variables
+
+$primary: #174190;
+$secondary: #42a620;
+// $dark: #386086;
+// $light: #f2efee;
+// $success: #66ab57;
+// $info: #9ab6da;
+// $warning: #e49b1f;
+// $danger: #f44336;
+
+// over write font family
+
+$font-family-base: "Your Font Name", sans-serif;
+
+// import bootstrap styles at the bottom!
+@import "bootstrap/scss/bootstrap.scss";
